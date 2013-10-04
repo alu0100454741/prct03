@@ -1,0 +1,63 @@
+PREGUNTAS DE LPP Practica03
+
+21.¿Qué diferencia hay entre "\t\n" y ’\t\n’?
+Las dobles comillas interpreta el lenguaje ruby que ahi se escribe, en cambio las simples no lo interpreta
+y escribe lo que ahi se encuentra aunque sea ruby.
+
+22.¿Cómo funciona %q? ¿Qué es %q{hello world\n}? ¿Qué es %q{’a’ ’b’ ’c’}?
+%q funciona de la misma forma que comillas simples, todo lo que se escriba dentro de el se pondra entre
+comillas simples.
+
+Es un String
+2.0.0-p247 :052 > b = %q{Hello world\n}
+ => "Hello world\\n" 
+ 
+ Es un String
+ 2.0.0-p247 :057 > a = %q{’a’ ’b’ ’c’}
+ => "’a’ ’b’ ’c’"
+ 
+ 23.¿Cómo funciona %Q? ¿Qué es %Q{hello world\n}? ¿Qué es %Q{"a" "b" "c"}?
+ %q funciona de la misma forma que comillas dobles,interpreta todo lo que se escriba dentro de el.
+ 
+ Es un string
+ 2.0.0-p247 :060 > %Q{hello world\n}
+ => "hello world\n"
+ 
+ Es string
+ 2.0.0-p247 :063 >  %Q{"a" "b" "c"}
+ => "\"a\" \"b\" \"c\"" 
+
+24.¿Qué queda en c?
+
+2.0.0-p247 :065 > a = 4
+ => 4 
+2.0.0-p247 :066 > b = 2
+ => 2 
+2.0.0-p247 :067 > c = <<HERE
+2.0.0-p247 :068"> --#{a}--
+2.0.0-p247 :069"> --#{b}--
+2.0.0-p247 :070"> HERE
+ => "--4--\n--2--\n"
+
+25.¿Qué queda en c?
+ 
+2.0.0-p247 :065 > a = 4
+ => 4 
+2.0.0-p247 :066 > b = 2
+ => 2 
+2.0.0-p247 :067 > c = <<'HERE'
+2.0.0-p247 :068"> --#{a}--
+2.0.0-p247 :069"> --#{b}--
+2.0.0-p247 :070"> HERE
+ => "--\#{a}--\nb = 2\n" 
+
+26.  s = "hello".¿Cuál es el valor de las siguientes expresiones?
+2.0.0-p247 :079 > s[0,2]
+=> "he" 
+ 
+2.0.0-p247 :079 > s[0,2]
+=> "he" 
+
+2.0.0-p247 :081 > s[0,10]
+=> "hello" 
+
